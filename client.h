@@ -27,17 +27,20 @@ struct UniClient
         std::cout << "load server Addr: " << m_serverAddr << std::endl;
     };
 
-
-
     std::string m_serverAddr = "";
     tl::engine *m_clientEnginePtr = NULL;
-
+    
+    //the remote procedure is supposed to be called only once
     tl::remote_procedure m_remoteserver1;
     tl::remote_procedure m_remoteserver2;
 
+    mutable std::unordered_map<std::string, tl::endpoint> m_endpoint_cache;
 
-    ~UniClient(){};
+    ~UniClient(){
+        std::cout<<"destroy client"<<std::endl;
+    };
 
+    tl::endpoint lookup(const std::string& address) const;
 
     void callserver1();
 

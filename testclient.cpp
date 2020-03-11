@@ -94,6 +94,9 @@ int main(int argc, char **argv)
     {
         clientEnginePtr->callserver2();
     }
+
+    //free the endpoint and remote procesures
+    delete clientEnginePtr;
     MPI_Finalize();
 }
 
