@@ -6,6 +6,8 @@
 #include <mpi.h>
 #include "client.h"
 
+
+
 #ifdef USE_GNI
 extern "C"
 {
@@ -23,6 +25,8 @@ extern "C"
         }                                                                                                         \
     } while (0)
 #endif
+
+namespace tl = thallium;
 
 const std::string serverCred = "cred_conf";
 

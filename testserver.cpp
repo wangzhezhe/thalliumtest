@@ -95,10 +95,8 @@ void runRerver(int serverID, std::string networkingType, std::string globalAddrS
         std::ifstream infile(serverCred);
         std::string cred_id;
         std::getline(infile, cred_id);
-        if (rank == 0)
-        {
-            std::cout << "load cred_id: " << cred_id << std::endl;
-        }
+
+        std::cout << "load cred_id: " << cred_id << std::endl;
 
         drc_credential_id = (uint32_t)atoi(cred_id.c_str());
 
@@ -134,8 +132,8 @@ void runRerver(int serverID, std::string networkingType, std::string globalAddrS
     }
     if (serverID == 2)
     {
-        globalServerEnginePtr->define("callserver2", callserver2);
         uniClient = new UniClient(globalServerEnginePtr, globalAddrServer1);
+        globalServerEnginePtr->define("callserver2", callserver2);
     }
 
     std::cout << "Server running at address " << globalServerEnginePtr->self() << std::endl;

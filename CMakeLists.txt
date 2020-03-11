@@ -63,8 +63,8 @@ target_link_libraries(testserver thallium ${DRC_LIBRARIES})
   ./client.cpp
   )
 target_link_libraries(testclient thallium MPI::MPI_C ${DRC_LIBRARIES})
-endif()
 
+else()
 
   add_executable(testserver 
   ./testserver.cpp
@@ -78,6 +78,12 @@ target_link_libraries(testserver thallium)
   ./client.cpp
   )
 target_link_libraries(testclient thallium MPI::MPI_C )
+
+
+endif()
+
+
+
 
 
 
