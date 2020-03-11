@@ -1,20 +1,5 @@
-the potential errors:
+the potential error:
 
-
-```
-# HG -- Error -- /tmp/zw241/spack-stage/mercury-master-keawdpmu67deic6pmu555va3nz3owf7d/spack-src/src/mercury_core.c:1164
- # hg_core_finalize(): HG addrs must be freed before finalizing HG (1 remaining)
-# HG -- Error -- /tmp/zw241/spack-stage/mercury-master-keawdpmu67deic6pmu555va3nz3owf7d/spack-src/src/mercury_core.c:3434
- # HG_Core_finalize(): Cannot finalize HG core layer
-# HG -- Error -- /tmp/zw241/spack-stage/mercury-master-keawdpmu67deic6pmu555va3nz3owf7d/spack-src/src/mercury.c:1009
- # HG_Finalize(): Could not finalize HG core class
-# HG -- Error -- /tmp/zw241/spack-stage/mercury-master-keawdpmu67deic6pmu555va3nz3owf7d/spack-src/src/mercury_core.c:1164
- # hg_core_finalize(): HG addrs must be freed before finalizing HG (1 remaining)
-# HG -- Error -- /tmp/zw241/spack-stage/mercury-master-keawdpmu67deic6pmu555va3nz3owf7d/spack-src/src/mercury_core.c:3434
- # HG_Core_finalize(): Cannot finalize HG core layer
-# HG -- Error -- /tmp/zw241/spack-stage/mercury-master-keawdpmu67deic6pmu555va3nz3owf7d/spack-src/src/mercury.c:1009
- # HG_Finalize(): Could not finalize HG core class
-```
 
 ```
 execute callserver2 call callserver1
